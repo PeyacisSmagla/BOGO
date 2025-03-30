@@ -64,13 +64,13 @@ function renderCards() {
           </div>
           <p>${cardData.price} <br /><del>${cardData.oldPrice}</del></p>
         </div>
-        <div class="bogo-selection-container" onclick="stopPropagation(event)">
+        <div class="bogo-selection-container">
           <div class="bogo-selection-card">
             <div class="bogo-selection-subcard">
               <p>#1</p>
               <p>#2</p>
             </div>
-            <div class="bogo-selection-subcard1">
+            <div class="bogo-selection-subcard1" onclick="stopPropagation(event)">
               <p>Size</p>
               <select>
                 ${cardData.sizes
@@ -83,7 +83,7 @@ function renderCards() {
                   .join("")}
               </select>
             </div>
-            <div>
+            <div onclick="stopPropagation(event)">
               <p>Colour</p>
               <select>
                 ${cardData.colors
