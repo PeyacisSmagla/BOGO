@@ -1,0 +1,198 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bogo-cards-container {
+  max-height: 100rem;
+  overflow-y: auto;
+}
+
+.bogo-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .bogo-heading-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    h2 {
+      color: #ff6b82;
+      font-weight: 500;
+      font-size: 1.4rem;
+    }
+    hr {
+      width: 8.5rem;
+      border: 1px solid #c8c8c8;
+    }
+
+    @media screen and (max-width: 500px) {
+      h2 {
+        font-size: 1rem;
+      }
+      hr {
+        width: 5rem;
+      }
+    }
+  }
+}
+
+.bogo-popular-card {
+  position: absolute;
+  .bogo-popular-label {
+    background-color: #ff6b82;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem 1rem;
+    color: #fff;
+    font-weight: 500;
+    margin: 0px;
+    width: 9rem;
+    position: absolute;
+    top: -1.16rem;
+    left: 14.95rem;
+    border-radius: 0.3rem;
+  }
+  img {
+    position: absolute;
+    width: 11.9rem;
+    top: -1.15rem;
+    left: 14.5rem;
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 500px) {
+    left: -8.2rem;
+  }
+}
+
+.bogo-option-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  input {
+    color: #000;
+    transform: scale(1.2);
+    accent-color: rgb(241, 100, 100);
+  }
+  .bogo-option-card {
+    display: flex;
+    gap: 0.6rem;
+
+    .bogo-label-container {
+      label {
+        font-weight: 500;
+        span {
+          background-color: #ff6b82;
+          color: #fff;
+          margin-left: 0.2rem;
+          padding: 1px 0.5rem;
+          font-weight: 400;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  p {
+    columns: #000;
+    font-weight: 500;
+  }
+  p > del {
+    color: rgb(189, 185, 185);
+    font-size: 0.7rem;
+  }
+}
+
+.bogo-option-maincontainer {
+  cursor: pointer;
+  border: 1px solid #c8c8c8;
+  padding: 0.5rem 2rem;
+  margin: 1rem 0;
+  @media screen and (min-width: 300px) and (max-width: 500px) {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.bogo-selection-container {
+  display: none;
+}
+
+.bogo-option-maincontainer.checked {
+  border: 2px solid #ff6b82;
+  background-color: #fff9fa;
+}
+.bogo-selection-container.checked {
+  display: block;
+}
+
+.bogo-selection-card {
+  display: flex;
+  gap: 0.2rem;
+  margin-left: 1.8rem;
+
+  .bogo-selection-subcard {
+    align-self: flex-end;
+    p {
+      margin: 0 0.4rem 1rem 0;
+    }
+  }
+  select {
+    margin: 0 0 0.6rem 0;
+    width: 4.5rem;
+    height: 1.8rem;
+    border-radius: 0.3rem;
+  }
+  p {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+  }
+}
+
+.bogo-delivery-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .free-delivery {
+    color: #ff6b82;
+  }
+  p {
+    font-weight: 500;
+    font-family: 1.1rem;
+  }
+}
+
+.bogo-selection-subcard1 {
+  margin-right: 1rem;
+}
+button {
+  background-color: #ff6b82;
+  height: 3rem;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+button .bogo-plus-sign {
+  font-size: 1.5rem;
+}
+
+.bogo-pumber-label {
+  align-self: flex-end;
+  color: #00000066;
+  font-style: italic;
+  margin-top: 0.1rem;
+}
